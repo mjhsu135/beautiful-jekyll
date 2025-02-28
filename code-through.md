@@ -16,15 +16,15 @@ mission statements to organization names, the data set is mostly comprised of
 text or character strings which is a perfect candidate when it comes to 
 demonstrating the uses of <code>quanteda</code>. </p>
 
+---
+
+### Loading the Packages and Data Set:
+
 <p> As with most packages, <code>quanteda</code> is often used alongside other packages 
 such as  or  to help with the data processing and analysis. In this code-through, 
 we will be using <code>dplyr</code>, <code>pander</code>, and <code>tidyverse</code> 
 to help with formatting certain data sets and cleaning up the results of the 
 coding chunks. </p>
-
----
-
-### Loading the Packages and Data Set:
 
 ```r
 
