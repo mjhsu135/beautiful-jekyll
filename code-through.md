@@ -1,3 +1,7 @@
+# Quanteda Code Through 
+**Michelle Hsu**  
+*2025-02-20*
+
 # Introduction: 
 
 <br>
@@ -12,7 +16,7 @@ As with most packages, <code>quanteda</code> is often used alongside other packa
 
 <br>
 
-```{r}
+```r
 
 library (quanteda)
 library (dplyr)
@@ -21,7 +25,7 @@ library (pander)
 
 ```
 
-```{r}
+```r
 
 URL <- "https://github.com/DS4PS/cpp-527-spr-2020/blob/master/labs/data/IRS-1023-EZ-MISSIONS.rds?raw=true"
 dat <- readRDS(gzcon(url( URL )))
@@ -50,7 +54,7 @@ First we need to load in the mission statements of the different non-profit orga
 
 <br>
 
-```{r, message=F}
+```r, message=F
 
 dat$mission <- tolower( dat$mission )
 
@@ -62,7 +66,7 @@ Here is when we finally get to see how corpuses and tokens are used. Since we ar
 
 <br>
 
-```{r}
+```r
 
 corp <- corpus(dat, text_field = "mission")
 corp <- corpus_trim(corp, what = "sentences", min_ntoken = 3)
@@ -75,7 +79,7 @@ tokens <- tokens_remove(tokens, c(stopwords("english"), "nbsp"), padding = FALSE
 
 Organizing 
 
-```{r}
+```r
 
 my_dictionary <- dictionary(list(
     five01_c_3 = c("501 c 3", "section 501 c 3"),
@@ -93,13 +97,13 @@ my_dictionary <- dictionary(list(
 
 ```
 
-```{r}
+```r
 
 tokens <- tokens_compound(tokens, pattern = my_dictionary)
 
 ```
 
-```{r}
+```r
 tokens_stemmed <- tokens_wordstem(tokens)
 
 dfm_stemmed <- dfm(tokens_stemmed)
@@ -115,6 +119,8 @@ pander(word_counts)
 
 <br>
 
+
+<br>
 
 # References
 
