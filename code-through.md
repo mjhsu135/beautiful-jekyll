@@ -117,6 +117,8 @@ pander(word_counts)
 
 ```
 
+![]({{site.url}}/assets/img/final-table.png)  
+
 # Conclusion:
 
 ---
