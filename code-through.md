@@ -19,6 +19,8 @@ library (pander)
 
 ```
 
+<br>
+
 ```r
 
 URL <- "https://github.com/DS4PS/cpp-527-spr-2020/blob/master/labs/data/IRS-1023-EZ-MISSIONS.rds?raw=true"
@@ -36,7 +38,7 @@ In Lab 04 Part II, Question 1, we were asked to find the ten most frequently-use
 
 First we need to load in the mission statements of the different non-profit organizations.
 
-```r, message=F
+```r
 
 dat$mission <- tolower( dat$mission )
 
@@ -86,6 +88,11 @@ tokens_stemmed <- tokens_wordstem(tokens)
 dfm_stemmed <- dfm(tokens_stemmed)
 
 word_counts <- topfeatures(dfm_stemmed)
+
+```
+
+```r
+
 pander(word_counts)
 
 ```
