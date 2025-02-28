@@ -125,6 +125,9 @@ pander(word_counts)
 
 This code-through references the following sources:
 
-* Unknown (Unknown). RDocumentation. [RDocumentation](https://www.rdocumentation.org/packages/quanteda/versions/0.9.2-0/topics/corpus)
+* Unknown (Unknown). RDocumentation. 
+[RDocumentation](https://www.rdocumentation.org/packages/quanteda/versions/0.9.2-0/topics/corpus)
 
-* Kenneth Benoit and Kohei Watanabe and Haiyan Wang and Paul Nulty and Adam Obeng and Stefan Müller and Akitaka Matsuo (2018) quanteda. [Data Imaginist](https://quanteda.io/articles/quickstart.html)
+* Kenneth Benoit and Kohei Watanabe and Haiyan Wang and Paul Nulty and Adam Obeng a
+nd Stefan Müller and Akitaka Matsuo (2018) quanteda. 
+[Quanteda](https://quanteda.io/articles/quickstart.html)
