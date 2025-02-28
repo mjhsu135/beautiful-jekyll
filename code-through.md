@@ -97,17 +97,23 @@ my_dictionary <- dictionary(list(
 ))
 
 ```
-Here we are using the <code>tokens_compound</code> function to take the tokens we
-already created and to add it to 
+Here we are using the <code>tokens_compound()</code> function to take the tokens we
+created in the dictionary above and further filter the <code>dat$mission</code> data set 
+to fit the criteria we are looking for. 
+
 ```r
 
 tokens <- tokens_compound(tokens, pattern = my_dictionary)
 
 ```
 
-
 Additionally, we are using the <code>dfm()</code> function in order to create a data frame of
-our organized data we just filtered through. 
+our organized data we just filtered through and <code>tokens_wordstem()</code> to find words that
+start with similar roots or phrases and add them to the count of how many instances of that word exist
+
+<i> Example: We might have the words purpose, purposed, purposing, etc. but they all start with the same
+stem of <b>purpos</b>. Thus, instead of categorizing them into their own individual category, they are categorized
+under <b>purpos</b>.</i>
 
 ```r
 
@@ -126,8 +132,6 @@ to make the table look more organized:
 pander(word_counts)
 
 ```
-### Final Results: 
-
 And thus, our final results should look something like this: 
 
 ![]({{site.url}}/assets/img/final-table.png)  
