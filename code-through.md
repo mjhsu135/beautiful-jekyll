@@ -48,9 +48,9 @@ dat <- readRDS(gzcon(url( URL )))
 ### Creating a Corpus and Using Tokens:
 
 <p> When working with the quanteda package, we need to create a series of called corpuses. 
-A corpus allows 
+A corpus allows </p>
 
-<p> Alongside corpuses, we also use tokens. Tokens help with 
+<p> Alongside corpuses, we also use tokens. Tokens help with </p>
 
 #### Example: 
 
@@ -127,6 +127,8 @@ pander(word_counts)
 
 ```
 ### Final Results: 
+
+And thus, our final results should look something like this: 
 
 ![]({{site.url}}/assets/img/final-table.png)  
 
