@@ -1,5 +1,5 @@
 # Quanteda Code Through 
-## Module 7
+## <i>Module 7</i>
 **Michelle Hsu**  
 *2025-02-20*
 
