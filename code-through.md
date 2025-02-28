@@ -17,6 +17,8 @@ To demonstrate how to use quanteda, we will be using the same data set from Lab 
 As with most packages, <code>quanteda</code> is often used alongside other packages such as  or  to help with the data processing and analysis. In this code-through, we will be using <code>dplyr</code>, <code>pander</code>, and <code>tidyverse</code> to help with formatting certain data sets and cleaning up the results of the coding chunks. 
 </p>
 
+---
+
 ### Loading the Packages and Data Set:
 
 ```r
@@ -107,6 +109,8 @@ pander(word_counts)
 ```
 
 # Conclusion:
+
+---
 
 # References
 
