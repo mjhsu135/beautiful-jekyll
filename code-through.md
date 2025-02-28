@@ -47,8 +47,10 @@ dat <- readRDS(gzcon(url( URL )))
 
 ### Creating a Corpus and Using Tokens:
 
-When working with the quanteda package, we need to create a series of called corpuses. 
+<p> When working with the quanteda package, we need to create a series of called corpuses. 
 A corpus allows 
+
+<p> Alongside corpuses, we also use tokens. Tokens help with 
 
 #### Example: 
 
@@ -64,7 +66,8 @@ dat$mission <- tolower( dat$mission )
 
 ```
 
-Here is when we finally get to see how corpuses and tokens are used. Since we are using 
+Here is when we finally get to see how corpuses and tokens are used. Since we are
+Looking for 
 
 ```r
 
@@ -75,7 +78,7 @@ tokens <- tokens_remove(tokens, c(stopwords("english"), "nbsp"), padding = FALSE
 
 ```
 
-Organizing 
+ 
 
 ```r
 
@@ -94,12 +97,17 @@ my_dictionary <- dictionary(list(
 ))
 
 ```
-
+Here we are using the <code>tokens_compound</code> function to take the tokens we
+already created and to add it to 
 ```r
 
 tokens <- tokens_compound(tokens, pattern = my_dictionary)
 
 ```
+
+
+Additionally, we are using the <code>dfm()</code> function in order to create a data frame of
+our organized data we just filtered through. 
 
 ```r
 
@@ -110,16 +118,25 @@ dfm_stemmed <- dfm(tokens_stemmed)
 word_counts <- topfeatures(dfm_stemmed)
 
 ```
+Now that everything is organized and filtered properly, once we use <code>pander</code>
+to make the table look more organized: 
 
 ```r
 
 pander(word_counts)
 
 ```
+### Final Results: 
 
 ![]({{site.url}}/assets/img/final-table.png)  
 
 # Conclusion:
+
+<p> <code>quanteda</code> can be used for a variety of different text related contexts,
+whether for textual analysis or data organization. When used alongside different packages, 
+we can create organized and clean data sets to present to different audiences, whether
+it be fellow coders or to the general public. Thus, <code>quanteda</code> is a wonderfully
+helpful package in regards to work flow, presentation, and organization. </p>
 
 ---
 
