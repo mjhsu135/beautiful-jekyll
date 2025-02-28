@@ -1,5 +1,5 @@
 # Quanteda Code Through 
-## <i>Module 7</i>
+### <i>Module 7</i>
 **Michelle Hsu**  
 *2025-02-20*
 
@@ -45,12 +45,12 @@ dat <- readRDS(gzcon(url( URL )))
 
 ```
 
-# Creating a Corpus and Using Tokens:
+### Creating a Corpus and Using Tokens:
 
 When working with the quanteda package, we need to create a series of called corpuses. 
 A corpus allows 
 
-### Example: 
+#### Example: 
 
 In Lab 04 Part II, Question 1, we were asked to find the ten most frequently-
 used words in the missions statements after stemming the data. In order to do so, 
