@@ -4,9 +4,18 @@
 
 # Introduction: 
 
-In this code-through, we are going to go more in depth about a package we used in Lab 04 called <code>quanteda</code>. <code>quanteda</code> is an R package that was made to help with textual analysis, data transformation, and organization. To demonstrate how to use quanteda, we will be using the same data set from Lab 04. The data set has details about different non-profit organizations and initiatives as well as what communities they are helping or representing. From mission statements to organization names, the data set is mostly comprised of text or character strings which is a perfect candidate when it comes to demonstrating the uses of <code>quanteda</code>.
+<p>
+In this code-through, we are going to go more in depth about a package we used in Lab 04 called <code>quanteda</code>. 
+<code>quanteda</code> is an R package that was made to help with textual analysis, data transformation, and organization.
+</p>
 
+<p>
+To demonstrate how to use quanteda, we will be using the same data set from Lab 04. The data set has details about different non-profit organizations and initiatives as well as what communities they are helping or representing. From mission statements to organization names, the data set is mostly comprised of text or character strings which is a perfect candidate when it comes to demonstrating the uses of <code>quanteda</code>.
+</p>
+
+<p>
 As with most packages, <code>quanteda</code> is often used alongside other packages such as  or  to help with the data processing and analysis. In this code-through, we will be using <code>dplyr</code>, <code>pander</code>, and <code>tidyverse</code> to help with formatting certain data sets and cleaning up the results of the coding chunks. 
+</p>
 
 ### Loading the Packages and Data Set:
 
@@ -19,7 +28,7 @@ library (pander)
 
 ```
 
-<br>
+<p> </p>
 
 ```r
 
