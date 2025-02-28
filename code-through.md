@@ -111,7 +111,7 @@ Additionally, we are using the <code>dfm()</code> function in order to create a 
 our organized data we just filtered through and <code>tokens_wordstem()</code> to find words that
 start with similar roots or phrases and add them to the count of how many instances of that word exist
 
-<i> Example: We might have the words purpose, purposed, purposing, etc. but they all start with the same
+<i> Note: We might have the words purpose, purposed, purposing, etc. but they all start with the same
 stem of <b>purpos</b>. Thus, instead of categorizing them into their own individual category, they are categorized
 under <b>purpos</b>.</i>
 
