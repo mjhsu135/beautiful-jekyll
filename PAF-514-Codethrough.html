@@ -2831,7 +2831,7 @@ border-radius: 0px;
 package we used in Lab 04 called <code>quanteda</code>.
 <code>quanteda</code> is an R package that was made to help with textual
 analysis, data transformation, and organization.</p>
-<p>To demonstrate how to use quanteda, we will be using the same data
+<p>To demonstrate how to use <code>quanteda</code>, we will be using the same data
 set from Lab 04. The data set has details about different non-profit
 organizations and initiatives as well as what communities they are
 helping or representing. From mission statements to organization names,
@@ -2865,7 +2865,7 @@ on a corpus.” In other words, the function will help transfer chunks of
 texts into a readable form for R to read and an output that the user can
 comprehend as well.</p>
 <p>Alongside corpuses, we also use tokens. As described by the CRAN
-quick start guide once more, “[<code>tokens()</code>]” produces an
+quick start guide once more, “[<code>tokens()</code>] produces an
 intermediate object, consisting of a list of tokens in the form of
 character vectors, where each element of the list corresponds to an
 input document.” In other words, they are pieces of code that correlate
@@ -2886,7 +2886,7 @@ non-profit organizations.</p>
 <p>Here is when we finally get to see how corpuses and tokens are used.
 With the <code>corpus()</code> and <code>corpus_trim</code> we are
 creating the main data frame and source for R to use the
-<code>tokens()</code> and &lt;tokens_remove()</code> functions to remove
+<code>tokens()</code> and <code>tokens_remove()</code> functions to remove
 unwanted spaces, phrases, punctuation, and more to gather together the
 main set of data.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>corp <span class="ot">&lt;-</span> <span class="fu">corpus</span>(dat, <span class="at">text_field =</span> <span class="st">&quot;mission&quot;</span>)</span>

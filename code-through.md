@@ -10,7 +10,7 @@ used in Lab 04 called <code>quanteda</code>. <code>quanteda</code> is an R packa
 that was made to help with textual analysis, data transformation, 
 and organization. 
 
- To demonstrate how to use quanteda, we will be using the same data set from 
+ To demonstrate how to use <code>quanteda</code>, we will be using the same data set from 
 Lab 04. The data set has details about different non-profit organizations and 
 initiatives as well as what communities they are helping or representing. From 
 mission statements to organization names, the data set is mostly comprised of 
@@ -78,7 +78,7 @@ dat$mission <- tolower( dat$mission )
 
 Here is when we finally get to see how corpuses and tokens are used. With the 
 <code>corpus()</code> and <code>corpus_trim</code> we are creating the main data frame
-and source for R to use the <code>tokens()</code> and <tokens_remove()</code> functions
+and source for R to use the <code>tokens()</code> and <code><tokens_remove()</code> functions
 to remove unwanted spaces, phrases, punctuation, and more to gather together the main set
 of data. 
 
