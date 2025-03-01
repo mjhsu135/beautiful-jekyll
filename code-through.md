@@ -22,7 +22,7 @@ demonstrating the uses of <code>quanteda</code>.
 ### Loading the Packages and Data Set:
 
  As with most packages, <code>quanteda</code> is often used alongside other packages 
-such as  or  to help with the data processing and analysis. In this code-through, 
+such as <code>readtext</code> or <code>spacyr</code> to help with the data processing and analysis. In this code-through, 
 we will be using <code>dplyr</code>, <code>pander</code>, and <code>tidyverse</code> 
 to help with formatting certain data sets and cleaning up the results of the 
 coding chunks. 
