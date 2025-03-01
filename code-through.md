@@ -55,8 +55,8 @@ A corpus allows </p>
 #### Example: 
 
 In Lab 04 Part II, Question 1, we were asked to find the ten most frequently-
-used words in the missions statements after stemming the data. In order to do so, 
-we had to organize the data such that 
+used words in the missions statements after stemming the data. Here we will use <code>quanteda</code>
+to help with filtering and organizing the data. 
 
 First we need to load in the mission statements of the different non-profit organizations.
 
@@ -78,7 +78,9 @@ tokens <- tokens_remove(tokens, c(stopwords("english"), "nbsp"), padding = FALSE
 
 ```
 
- 
+Once we have our initial tokens and corpuses, in the context of this Lab 04 question, we will
+organize a dictionary of different phrases and character strings we want to see in our
+end results. 
 
 ```r
 
@@ -114,9 +116,9 @@ start with similar roots or phrases and add them to the count of how many instan
 The function <code>topfeatures()</code> highlight the top ten instances of a variable. In this case,
 it is highlighting the top ten instances of different stemmed words.
 
-<i> An Aside: We might have the words purpose, purposed, purposing, etc. but they all start with the same
+<i> An Aside: We might have the words purpose, purposed, purposing, etc., however note that they all start with the same
 stem of <b>purpos</b>. Thus, instead of categorizing them into their own individual category, they are categorized
-under <b>purpos</b>.</i>
+under the stem <b>purpos</b>.</i>
 
 ```r
 
@@ -127,7 +129,7 @@ dfm_stemmed <- dfm(tokens_stemmed)
 word_counts <- topfeatures(dfm_stemmed)
 
 ```
-Now that everything is organized and filtered properly, once we use <code>pander</code>
+Now that everything is organized and filtered properly, once we use <code>pander()</code>
 to make the table look more organized: 
 
 ```r
