@@ -5,27 +5,27 @@
 
 # Introduction: 
 
-<p> In this code-through, we are going to go more in depth about a package we 
+ In this code-through, we are going to go more in depth about a package we 
 used in Lab 04 called <code>quanteda</code>. <code>quanteda</code> is an R package 
 that was made to help with textual analysis, data transformation, 
-and organization. </p>
+and organization. 
 
-<p> To demonstrate how to use quanteda, we will be using the same data set from 
+ To demonstrate how to use quanteda, we will be using the same data set from 
 Lab 04. The data set has details about different non-profit organizations and 
 initiatives as well as what communities they are helping or representing. From 
 mission statements to organization names, the data set is mostly comprised of 
 text or character strings which is a perfect candidate when it comes to 
-demonstrating the uses of <code>quanteda</code>. </p>
+demonstrating the uses of <code>quanteda</code>. 
 
 ---
 
 ### Loading the Packages and Data Set:
 
-<p> As with most packages, <code>quanteda</code> is often used alongside other packages 
+ As with most packages, <code>quanteda</code> is often used alongside other packages 
 such as  or  to help with the data processing and analysis. In this code-through, 
 we will be using <code>dplyr</code>, <code>pander</code>, and <code>tidyverse</code> 
 to help with formatting certain data sets and cleaning up the results of the 
-coding chunks. </p>
+coding chunks. 
 
 ```r
 
@@ -47,18 +47,28 @@ dat <- readRDS(gzcon(url( URL )))
 
 ### Creating a Corpus and Using Tokens:
 
-<p> When working with the quanteda package, we need to create a series of called corpuses. 
-A corpus allows </p>
+ When working with the <code>quanteda</code> package, we need to create a series of called corpuses. 
+According to the quick start guide provided by CRAN, "A corpus is a special form of character vector, 
+meaning most functions that work with a character input will also work on a corpus." In other words,
+the function will help transfer chunks of texts into a readable form for R to read and an output 
+that the user can comprehend as well. 
 
-<p> Alongside corpuses, we also use tokens. Tokens help with </p>
 
-#### Example: 
+ Alongside corpuses, we also use tokens. As described by the CRAN quick start guide once more,
+"[<code>tokens()</code>]" produces an intermediate object, consisting of a list of tokens in 
+the form of character vectors, where each element of the list corresponds to an input document."
+In other words, they are pieces of code that correlate with an element in the main data set or
+data frame being used as reference.
 
-In Lab 04 Part II, Question 1, we were asked to find the ten most frequently-
+ Together, they can be used to filter, organize, and create a new data frame or data set. 
+
+### Example: 
+
+ In Lab 04 Part II, Question 1, we were asked to find the ten most frequently-
 used words in the missions statements after stemming the data. Here we will use <code>quanteda</code>
 to help with filtering and organizing the data. 
 
-First we need to load in the mission statements of the different non-profit organizations.
+ First, we need to load in the mission statements of the different non-profit organizations.
 
 ```r
 
@@ -66,8 +76,11 @@ dat$mission <- tolower( dat$mission )
 
 ```
 
-Here is when we finally get to see how corpuses and tokens are used. Since we are
-Looking for 
+Here is when we finally get to see how corpuses and tokens are used. With the 
+<code>corpus()</code> and <code>corpus_trim</code> we are creating the main data frame
+and source for R to use the <code>tokens()</code> and <tokens_remove()</code> functions
+to remove unwanted spaces, phrases, punctuation, and more to gather together the main set
+of data. 
 
 ```r
 
@@ -143,11 +156,11 @@ And thus, our final results should look something like this:
 
 # Conclusion:
 
-<p> <code>quanteda</code> can be used for a variety of different text related contexts,
+ <code>quanteda</code> can be used for a variety of different text related contexts,
 whether for textual analysis or data organization. When used alongside different packages, 
 we can create organized and clean data sets to present to different audiences, whether
 it be fellow coders or to the general public. Thus, <code>quanteda</code> is a wonderfully
-helpful package in regards to work flow, presentation, and organization. </p>
+helpful package in regards to work flow, presentation, and organization. 
 
 ---
 
@@ -155,9 +168,12 @@ helpful package in regards to work flow, presentation, and organization. </p>
 
 This code-through references the following sources:
 
+* Kenneth Benoit and Kohei Watanabe and Haiyan Wang and Paul Nulty and Adam Obeng 
+and Stefan Müller and Akitaka Matsuo. (2018) quanteda. 
+[Quanteda](https://quanteda.io/articles/quickstart.html)
+
+* Unknown (Unknown). CRAN. [CRAN](https://cran.r-project.org/web/packages/quanteda/vignettes/quickstart.html)
+
 * Unknown (Unknown). RDocumentation. 
 [RDocumentation](https://www.rdocumentation.org/packages/quanteda/versions/0.9.2-0/topics/corpus)
 
-* Kenneth Benoit and Kohei Watanabe and Haiyan Wang and Paul Nulty and Adam Obeng a
-nd Stefan Müller and Akitaka Matsuo (2018) quanteda. 
-[Quanteda](https://quanteda.io/articles/quickstart.html)
